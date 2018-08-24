@@ -8,13 +8,58 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>恋爱计时器</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <style>
-        body {
-            -webkit-font-smoothing: antialiased;
-            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-            background-image: url('bg.jpg');
-            font-size: 85%;
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
             margin: 0;
+        }
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
         }
         
         h2 {
@@ -46,13 +91,21 @@
     <div class="content">
         <h2>屁桃，我们已经在一起了</h2>
         <div class="timer">
-            <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+            <b id="d"></b> 天 <b id="h"></b> 小时 <b id="m"></b> 分钟 <b id="s"></b> 秒
+        </div>
+        <div class="content">
+            <div class="title m-b-md">
+                『❤️小屁陶❤️』
+            </div>
+            <div class="title m-b-md" id="content">
+                I LOVE YOU FOREVER
+            </div>
         </div>
     </div>
 
     <script>
         function timer() {
-            var start = new Date(2013, 12, 1); // 2015.7.2
+            var start = new Date(2016, 12, 19); 
             var t = new Date() - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
